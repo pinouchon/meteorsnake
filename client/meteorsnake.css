@@ -1,0 +1,16 @@
+
+.map {
+    background-color: #CCC;
+}
+.map td {
+    background-color: #F5F5F5;
+    width: 12px;
+    height: 12px;
+}
+h1 {
+    font-size: 20px;
+}
+.block {
+    float: left;
+    margin-right: 15px;
+}

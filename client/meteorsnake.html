@@ -1,0 +1,38 @@
+<head>
+  <title>meteorsnake</title>
+</head>
+
+<body>
+<h1>METEOR SNAKE FTW</h1>
+
+{{> loginButtons}}
+<div style="clear: both"></div>
+
+<div class="block">{{> map}}</div>
+<div class="block">{{> scores }}</div>
+
+</body>
+
+<template name="map">
+  <button class="reset">Reset</button>
+  <table class="map" id="map">
+    {{#each tiles2d}}
+    <tr>
+      {{#each this}}
+      <td style="background-color: #{{getColor}}"></td>
+      {{/each}}
+    </tr>
+    {{/each}}
+  </table>
+</template>
+
+<template name="scores">
+  Scores:
+  <ul>
+    {{#each users}}
+    <li style="color: #{{getColor}}">
+      <span style="color: black">{{score}} - {{username}}</span>
+    </li>
+    {{/each}}
+  </ul>
+</template>
